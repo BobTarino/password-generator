@@ -43,17 +43,19 @@ function generatePassword() {
 
   console.log(genCharacters);
 
-  var password = [];
+  // empty array for characters to be pushed to
+
+  var passwordArray = [];
 
 
   // Loop to generate the password with the correct variable and lenght 
   for (var i = 0; i < pwLength; i++) {
     var pwResult = genCharacters[Math.floor(Math.random() * genCharacters.length)];
-    password.push(pwResult);
+    passwordArray.push(pwResult);
   }
   
   // joins password array and coverts into a string
-  return password.join("");
+  return passwordArray.join("");
 
 }
 
@@ -71,10 +73,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-//prompt user for inputs to create password
-//collect all inputs and put them in object and then return that object.
-//take object created through function to return passwordSelections.
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
