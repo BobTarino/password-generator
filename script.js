@@ -12,17 +12,16 @@ function generatePassword() {
   var pwLength = prompt("How many characters do you want in your password? (Choose between 8 and 128 characters!)")
   // console.log(pwLength)
 
-  if (pwLength < 8 || pwLength > 128 || isNaN(pwLength) === true) {
+  if (pwLength < 8 || pwLength > 128 || isNaN(pwLength)=== true) {
     alert("Please enter a password between 8 and 128 characters")
     return;
-  } else {
-    lower = confirm("Do you want password to contain lowercase characters?");
-    upper = confirm("Do you want password to contain UPPERCASE characters?");
-    numeric = confirm("Do you want password to contain numbers?");
-    special = confirm("Do you want password to contain special characters (e.g. !, #, %)?");
   }
 
-
+   var lower = confirm("Do you want password to contain lowercase characters?");
+   var upper = confirm("Do you want password to contain UPPERCASE characters?");
+   var numeric = confirm("Do you want password to contain numbers?");
+   var special = confirm("Do you want password to contain special characters (e.g. !, #, %)?");
+  
 
   if (lower) {
     genCharacters = genCharacters.concat(lowercaseCharacters)
@@ -30,7 +29,6 @@ function generatePassword() {
 
   if (upper) {
     genCharacters = genCharacters.concat(uppercaseCharacters)
-
   }
 
   if (numeric) {
