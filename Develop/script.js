@@ -48,7 +48,7 @@ function generatePassword() {
   var passwordArray = [];
 
 
-  // Loop to generate the password with the correct variable and lenght 
+  // Loop to generate the password with the correct variable and length 
   for (var i = 0; i < pwLength; i++) {
     var pwResult = genCharacters[Math.floor(Math.random() * genCharacters.length)];
     passwordArray.push(pwResult);
