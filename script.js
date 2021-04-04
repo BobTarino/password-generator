@@ -10,7 +10,7 @@ var genCharacters = [];
 //Taking the inputs from user. Take potential characters pushing characters into array. 
 function generatePassword() {
   var pwLength = prompt("How many characters do you want in your password? (Choose between 8 and 128 characters!)")
-  console.log(pwLength)
+  // console.log(pwLength)
 
   if (pwLength < 8 || pwLength > 128 || isNaN(pwLength) === true) {
     alert("Please enter a password between 8 and 128 characters")
@@ -41,7 +41,7 @@ function generatePassword() {
     genCharacters = genCharacters.concat(specialCharacters)
   }
 
-  console.log(genCharacters);
+  // console.log(genCharacters);
 
   // empty array for characters to be pushed to
 
